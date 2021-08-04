@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QnA website</title>
+</head>
+<style>
+    *{margin:0}
+    nav{
+        position: fixed ;
+        height:6vh;
+        width: 100vw;
+        border-top: 1 px solid #d7e6dc;
+        border-bottom: 1px solid #d7e6dc;
+        font-size: 18px;
+        background-color: white;
+    }
+    .change-icon > .fa + .fa,
+    .change-icon:hover > .fa {
+    display: none;
+    }
+    .change-icon:hover > .fa + .fa {
+    display: inherit;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.3s;
+    }
+    #menu{
+        position: fixed;
+        display: none;
+        top:6vh;
+        left:84%;
+        background-color: white;
+        width:15vw;
+        height: 30vh;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5); 
+        font-size: 18px;
+    }
+    #menu li{
+        list-style: none;
+        padding: 8px;
+    }
+    .content{
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        grid-template-columns: repaet(2,auto);
+    }
+    .passage{
+        background-color: #d7e6dc;
+        height: 85vh;
+        width: 48%;
+        padding: 25px;
+        font-size: 16px;
+        line-height: 25px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align:justify;
+        position: fixed;
+        top:6vh;
+    }
+    .section{
+        position: relative;
+        left:50%;
+        top:6vh;
+        width: 45%;
+        padding: 40px;
+        font-size: 16px;
+        line-height: 25px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align:justify;
+    }
+    .notepad{
+        border:none;
+        width: 150px;
+        height: 30px;
+        color:#4a637c;
+    }
+    table{
+        width: 42vw;
+        border-color: #d7e6dc;
+    }
+    td{
+        padding-left: 20px;
+    }
+    .question span{
+        background-color: green;
+        border-radius: 25px;
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <nav>
+        <img src="./icon.png" height=40px>
+        <button class="change-icon" style="font-size: 30px;float: right;padding-right: 40px;padding-top: 8px;width:100px;border:none;background: transparent;" 
+        onclick="show()">
+            <i class="fa fa-bars"></i>
+            <i class="fa fa-close"></i>
+        </button>
+    </nav>
+    <div id="menu">
+        <ul>
+            <li>Share Test</li>
+            <li>Report Mistake</li>
+            <li>Text Size</li>
+            <li>Download</li>
+            <li>Instructions</li>
+            <li>Save Draft</li>
+            <li>Exit</li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="passage">
+            <br>
+            <h1>Reading passage <span id="passageno">1</span></h1><br>
+            Read the text below and answer <b>Questions <span id="questions"></span></b>(To scroll click inside this section and press arrow keys)<br>
+            <img id="image" src="./p1.png" width=100% height=40%><br>
+            <h2 style="text-align: center;">How to become a successful crime writer</h2><br>
+            <p>British authors have always excelled in one genre in particular: that of crime fiction. Sir Arthur Conan Doyle and Agatha Christie for some are synonymous with the genre, attaining the same celebrity status as their fictional creations, the eponymous Sherlock Holmes and Hercule Poirot, respectively. In the creation of such memorable characters, these two authors raised the bar for future crime fiction writers. So how can you, too, write gripping fiction that also will stand the test of time? Here are some simple tips that will help you on your way and improve your chances of getting Into print.
+            <p><br><b>Tip 1</b> The fiction world is awash with different types of crime novels. Before you put pen to paper, devour as many fiction novels as possible with varying sto-rylines. In this way you will learn how to create credible fictional characters and plots. Of course the make-or-break in any crime novel is the ending. Surprise revelations or an unexpected turn of events will delight readers. After all, even the experienced armchair detective likes to be kept guessing until the end.
+            <p><br><b>Tip 2</b> We have established that a great cliffhanger of a novel Is the key ingredient to all crime novels. But how do we build up the suspense and throw the reader off the scent of the real culprit? Well, the answer is to use as many red herrings and subplots as possible without becoming too involved. The subplots and false clues should never obscure the main plot entirely; otherwise, the reader will become lost in all the intricacies and minutiae of the subplots.
+            <p><br><b>Tip 3</b> It is important to establish your facts. If the setting of your novel Is In the past, beware of including modern-day devices or Inventions that did not exist at the time you are writing. Many a Hollywood blockbuster has been spoiled by anachronisms; the wearing of a watch in 'Gladiator' set in the Roman era is one such example. The same holds true for the written word.
+            <p><br>If, on the other hand, you are using a contemporary setting then ensure you are fully knowledgeable of modern hi-tech detection methods and forensic techniques. Internet search engines such as Google will help you get your head around the most up-to-date procedures. Your research should Include:</p>
+            </p><br>
+            <ul><li>DNA analysis</li>
+                <li>Forensic anthropology and pathology</li>
+                <li>Forensic criminology, psychiatry and psychology</li>
+                <li>Fingerprinting</li>
+                <li>Interviewing techniques</li>
+                <li>Computer forensics</li>
+            </ul>
+            <p><b>Tip 4</b> Don't lose the plot! Keep a track of not just your leading but also minor characters and their actions. It is important to have good continuity throughout. Whilst people may not be so rational or consistent in real life, your fictional creations need to have a certain level of consistency in their thoughts and actions, otherwise they may cease to maintain credibility with the reader. Sketching out a general overview of the plot before writing will also help to maintain structure to your novel.
+            </p><br><p><b>Tip 5</b> Lacking Inspiration? They say truth is stranger than fiction so why not look to real-life events to inspire you? A rummage through a few local and national papers may uncover a potential storyline. After all, it worked for celebrated crime author Jeffrey Archer, so why not you? It goes without saying that a degree of fictional embellishment of real-life people is necessary to avoid being accused of libel and a sudden curtailing of an otherwise budding career.
+            </p><br><p><b>Tip 6</b> Now you have written your best-selling novel all you need to do is find a publisher! Again, research on the internet will reveal a list of publishers most likely to publish your literary genre. Should you fail to find a publisher keep trying. After all, some of the most celebrated authors were initially turned down on their first attempt!
+            </p><br><b>Read the texts below and answer Questions 9-14.</b>
+            <br><h3>A. Buttercup Cafe</h3>
+            <br><p>Enjoy the cosy atmosphere of this cafe and sample the good, ‘no-frills’ honest home-cooked food. If, however, you are looking for a light snack, then sample one of our delicious sandwiches filled with locally sourced, fresh ingredients. The cafe is not licensed but there is a large selection of teas and soft drinks available.
+            </p><br><b>Cafe open: </b>Mon-Fri 10am-5pm
+            <br><b>Weekends: </b>Sat 11am-6pm Sundays closed
+            <br><h3>C. Chiquito Restaurant</h3>
+            <br><p>Presented with an extensive menu, you really are spoilt for choice at Chiquito's, if Mexican is your thing. The kitchen team offers a first-rate experience for all diners, no matter what the occasion is. With a variety of meat dishes ranging from succulent chicken served over fajita vegetables to beef chilli burgers or a full rack of lip-smacking ribs, whatever you choose, you can't go far wrong.
+            </p><br><b>Opening hours:</b>
+            <br>Weekdays 12pm-10pm
+            <br>Weekends 11am-1pm
+            <br><h3>B. Dolce Vita Restaurant</h3>
+            <p>Antonio and Lucia are the proud owners of this small, authentic Italian pizzeria which has been recently awarded Trip Advisor's 'Certificate of Excellence'. Whilst Antonio is essentially responsible for front-of-house duties, he has been known to give a hand in the kitchen, turning out his own speciality pizza.
+            </p><p>His wife usually stays behind the scenes turning out simply delicious dishes, the recipes for which were handed down from her grandmother. For that Special occasion, tailor-made private parties and large dinner groups can be accommodated. A striking function room, ideal for an intimate gathering, is also available.
+            </p><p>Restricted weekday opening (please check our website for details). Open every weekend from Ham-midnight. Website: www.dolceyita.com
+            </p><br><h3>E. Gelato Gusto</h3>
+            <br>Extending over two storeys this cafe is bright, stylish and down-to-earth. The sheer variety of ice cream flavours available is impressive. Bespoke concoctions also on offer. You can also buy takeaway tubs of ice cream to enjoy at your leisure.
+            <br><h3>D. Frankie and Benny's</h3>
+            <br><p>A great little restaurant with plenty of atmosphere. This is a family-run restaurant where everyone in the family helps with the cooking in equal measure. All the delicious dishes have been created by the two head chefs, Dario and Alessandro and their highly trained team. Together they have created a menu of contemporary dishes whish is quite regularly updated. Diners are encouraged to make use of the covered terrace for a spot of alfresco dining and people-watching.
+            </p>
+        </div>
+        <div class="section">
+            <h4 style="color: green;">Section 1: Questions 1-14</h4><br>
+            <h2>Questions 1-8</h2><br>
+            <button class="notepad"><span class="fa fa-calendar-o"></span>&nbsp;&nbsp;Show Notepad</button>
+            <p><i>Do the following statements agree with the information given in text?</i></p><br>
+            <p><i>In boxes <b>1-8</b> on your sheet, write</i></p>
+            <table border="1" cellspacing=0 cellpadding="5">
+                <tr style="background-color: #f5f5f5;">
+                    <td><b>TRUE</b></td>
+                    <td>if the statement agrees with the information</td>
+                </tr>
+                <tr>
+                    <td><b>FALSE</b></td>
+                    <td>if the statement contradicts the information</td>
+                </tr>
+                <tr style="background-color: #f5f5f5;">
+                    <td><b>NOT GIVEN</b></td>
+                    <td>if there is no information on this</td>
+                </tr>
+            </table>
+            <br>
+            <div class="question">
+                <span>&nbsp;&nbsp;1&nbsp;&nbsp;</span>
+                <select>
+                    <option></option>
+                    <option>TRUE</option>
+                    <option>FALSE</option>
+                    <option>NOT GIVEN</option>
+                </select>
+                So famous were the fictional characters of Conan Doyle and Christie’s crime novels that they eclipsed the fame of their authors.
+            </div>
+            <br>
+            <div class="question">
+                <span>&nbsp;&nbsp;2&nbsp;&nbsp;</span>
+                <select>
+                    <option></option>
+                    <option>TRUE</option>
+                    <option>FALSE</option>
+                    <option>NOT GIVEN</option>
+                </select>
+                The novels of Conan Doyle and Christie are less accomplished than those of modern crime writers.
+            </div>
+            <br>
+            <div class="question">
+                <span>&nbsp;&nbsp;3&nbsp;&nbsp;</span>
+                <select>
+                    <option></option>
+                    <option>TRUE</option>
+                    <option>FALSE</option>
+                    <option>NOT GIVEN</option>
+                </select>
+                It is more challenging to portray fictional than real-life characters in a novel.
+            </div>
+            <br>
+            <div class="question">
+                <span>&nbsp;&nbsp;4&nbsp;&nbsp;</span>
+                <select>
+                    <option></option>
+                    <option>TRUE</option>
+                    <option>FALSE</option>
+                    <option>NOT GIVEN</option>
+                </select>
+                It is more challenging to portray fictional than real-life characters in a novel.
+            </div>
+            <br>
+            <div class="question">
+                <span>&nbsp;&nbsp;5&nbsp;&nbsp;</span>
+                <select>
+                    <option></option>
+                    <option>TRUE</option>
+                    <option>FALSE</option>
+                    <option>NOT GIVEN</option>
+                </select>
+                It is more challenging to portray fictional than real-life characters in a novel.
+            </div>
+            <br>
+            <div class="question">
+                <span>&nbsp;&nbsp;6&nbsp;&nbsp;</span>
+                <select>
+                    <option></option>
+                    <option>TRUE</option>
+                    <option>FALSE</option>
+                    <option>NOT GIVEN</option>
+                </select>
+                Creating characters based on real-life people is a practice best avoided.
+            </div>
+            <br>
+            <div class="question">
+                <span>&nbsp;&nbsp;7&nbsp;&nbsp;</span>
+                <select>
+                    <option></option>
+                    <option>TRUE</option>
+                    <option>FALSE</option>
+                    <option>NOT GIVEN</option>
+                </select>
+                Seasoned crime novel readers like being able to guess the culprit in advance.
+            </div>
+            <br>
+            <div class="question">
+                <span>&nbsp;&nbsp;8&nbsp;&nbsp;</span>
+                <select>
+                    <option></option>
+                    <option>TRUE</option>
+                    <option>FALSE</option>
+                    <option>NOT GIVEN</option>
+                </select>
+                First-time crime authors may be turned down by publishers.
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    function show(){
+        var x=document.getElementById("menu");
+        if (x.style.display==="none"){
+            x.style.display="block";
+        }else{
+            x.style.display="none";
+        }
+    }
+</script>
+</body>
+</html>
