@@ -183,14 +183,32 @@
                 First-time crime authors may be turned down by publishers.
             </li></div>
         </div>
-        <div class="palette">
+        <div class="palette-close">
             <span class="fa fa-th">&nbsp;&nbsp;Question Palette</span>
             <span class="fa fa-clock-o" style="text-align: center;">&nbsp;&nbsp;60:00</span>
             <div style="text-align: right;padding-right: 50px;">
             <button class="fa fa-send">&nbsp;&nbsp;Submit</button>
             <button class="fa fa-map-o">&nbsp;&nbsp;Review</button>
             <button class="fa fa-puzzle-piece">&nbsp;&nbsp;Solution</button>
-            <span class="fa fa-angle-up"></span>
+            <span class="fa fa-angle-up" onclick="showpalette()"></span>
+            </div>
+        </div>
+        <div class="palette-open" id="palette-open">
+            <div>
+            <span class="fa fa-th">&nbsp;&nbsp;Question Palette</span>
+            </span><span style="font-size: 18px;float: right;">&nbsp;&nbsp;Unanswered</span>
+            <span class="fa fa-circle" style="font-size: 18px;float: right;color: #49965f;">
+            </span><span style="font-size: 18px;float: right;">&nbsp;&nbsp;Answered&nbsp;&nbsp;</span>
+            <span class="fa fa-circle" style="font-size: 18px;float: right;color:#105824">
+            <br>
+            <span>1</span>
+            </div>
+            <span class="fa fa-clock-o" style="text-align: center;">&nbsp;&nbsp;60:00</span>
+            <div style="text-align: left;padding-right: 50px;">
+            <button class="fa fa-send">&nbsp;&nbsp;Submit</button>
+            <span class="fa fa-angle-down" onclick="hidepalette()"></span><br>
+            <button class="fa fa-map-o">&nbsp;&nbsp;Review</button><br>
+            <button class="fa fa-puzzle-piece">&nbsp;&nbsp;Solution</button>
             </div>
         </div>
     </div>
@@ -202,6 +220,14 @@
         }else{
             x.style.display="none";
         }
+    }
+    function showpalette(){
+        var x=document.getElementById("palette-open");
+        x.style.display="grid";
+    }
+    function hidepalette(){
+        var x=document.getElementById("palette-open");
+        x.style.display="none";
     }
 </script>
 </body>
