@@ -94,12 +94,20 @@ td{
 .palette{
     position: fixed;
     width: 100%;
-    height: 3vh;
+    height: 5vh;
     bottom: 0;
     background-color: #284664;
     color: white;
-    font-size: 20px;
-    padding: 12px;
+    font-size: 24px;
+    padding-left: 30px;
+    padding-top: 6px;
     display: grid;
     grid-template-columns: repeat(3,auto);
+}
+.palette button{
+    color:green;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 16px;
 }
