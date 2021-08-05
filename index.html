@@ -29,10 +29,11 @@
         left:84%;
         background-color: white;
         width:15vw;
-        height: 30vh;
+        height: 35vh;
         border-radius: 5px;
         box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5); 
         font-size: 18px;
+        z-index: 1;
     }
     #menu li{
         list-style: none;
@@ -104,10 +105,9 @@
     </div>
     <nav>
         <img src="./icon.png" height=40px>
-        <div style="float: right;padding-right: 40px;padding-top: 8px;width:100px;">
-            <button class="fa fa-chevron-down">
-
-            </button>
+        <div style="float: right;padding-right: 40px;padding-top: 8px;width:200px;">
+            <button class="fa fa-chevron-down" style="border: 1px solid lightgray;color:rgb(111, 112, 116);height: 30px;border-radius: 5px;">
+                Show test info</button>
             <button class="change-icon" style="font-size: 30px;border:none;background: transparent;" onclick="show()">
                 <i class="fa fa-bars"></i>
                 <i class="fa fa-close"></i>
