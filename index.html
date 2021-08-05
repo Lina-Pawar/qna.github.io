@@ -3,102 +3,8 @@
 <head>
     <title>QnA website</title>
 </head>
-<style>
-    *{margin:0}
-    nav{
-        position: fixed ;
-        height:6vh;
-        width: 100vw;
-        border-top: 1 px solid #d7e6dc;
-        border-bottom: 1px solid #d7e6dc;
-        font-size: 18px;
-        background-color: white;
-    }
-    .change-icon > .fa + .fa,
-    .change-icon:hover > .fa {
-    display: none;
-    }
-    .change-icon:hover > .fa + .fa {
-    display: inherit;
-    transition: all .3 linear;
-    }
-    #menu{
-        position: fixed;
-        display: none;
-        top:6vh;
-        left:84%;
-        background-color: white;
-        width:15vw;
-        height: 35vh;
-        border-radius: 5px;
-        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5); 
-        font-size: 18px;
-        z-index: 1;
-    }
-    #menu li{
-        list-style: none;
-        padding: 8px;
-    }
-    .content{
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        display: flex;
-        grid-template-columns: repaet(2,auto);
-    }
-    .passage{
-        background-color: #d7e6dc;
-        height: 85vh;
-        width: 48%;
-        padding: 25px;
-        font-size: 16px;
-        line-height: 25px;
-        overflow-x: hidden;
-        overflow-y: auto;
-        text-align:justify;
-        position: fixed;
-        top:6vh;
-    }
-    .section{
-        position: relative;
-        left:50%;
-        top:6vh;
-        width: 45%;
-        padding: 40px;
-        font-size: 16px;
-        line-height: 25px;
-        text-align:justify;
-    }
-    .notepad{
-        border:none;
-        width: 150px;
-        height: 30px;
-        color:#4a637c;
-    }
-    table{
-        width: 42vw;
-        border-color: #d7e6dc;
-    }
-    td{
-        padding-left: 20px;
-    }
-    .question li{
-        list-style: none;
-    }
-    .question span{
-        padding: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        text-align: center;
-        border-radius: 40px;
-        background-color: green;
-        color: white;
-        font-weight: bold;
-    }
-    .question select{
-        width: 120px;
-        height: 30px;
-    }
-</style>
 <body>
+    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="">
 
@@ -109,7 +15,7 @@
             <button class="fa fa-chevron-down" style="border: 1px solid lightgray;color:rgb(111, 112, 116);height: 30px;border-radius: 5px;">
                 Show test info</button>
             <button class="change-icon" style="font-size: 30px;border:none;background: transparent;" onclick="show()">
-                <i class="fa fa-bars"></i>
+                <i class="fa fa-navicon"></i>
                 <i class="fa fa-close"></i>
             </button>
         </div>
@@ -276,6 +182,10 @@
                 </select>
                 First-time crime authors may be turned down by publishers.
             </li></div>
+        </div>
+        <div class="palette">
+            <span class="fa fa-th">&nbsp;&nbsp;Question Palette</span>
+            <span class="fa fa-clock-o">&nbsp;&nbsp;60:00</span>
         </div>
     </div>
 <script type="text/javascript">
