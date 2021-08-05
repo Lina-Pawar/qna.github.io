@@ -16,6 +16,16 @@ display: none;
 display: inherit;
 transition: all .3 linear;
 }
+#testinfo{
+    padding: 20px;
+    height: 15vh;
+    z-index: 1;
+    background-color: white;
+    position: fixed;
+    width: 98%;
+    display: none;
+    grid-template-columns: repeat(3,auto);
+}
 #menu{
     position: fixed;
     display: none;
