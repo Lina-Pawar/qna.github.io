@@ -209,14 +209,15 @@
         <div class="palette-open" id="palette-open">
             <div>
             <span class="fa fa-th">&nbsp;&nbsp;Question Palette</span>
-            </span><span style="font-size: 18px;float: right;">&nbsp;&nbsp;Unanswered</span>
-            <span class="fa fa-circle" style="font-size: 18px;float: right;color: #49965f;">
-            </span><span style="font-size: 18px;float: right;">&nbsp;&nbsp;Answered&nbsp;&nbsp;</span>
-            <span class="fa fa-circle" style="font-size: 18px;float: right;color:#105824">
+            <span style="font-size: 18px;float: right;">&nbsp;&nbsp;Unanswered</span>
+            <span class="fa fa-circle" style="font-size: 18px;float: right;color: #49965f;"></span>
+            <span style="font-size: 18px;float: right;">&nbsp;&nbsp;Answered&nbsp;&nbsp;</span>
+            <span class="fa fa-circle" style="font-size: 18px;float: right;color:#105824"></span>
             <br>
-            <span>1</span>
+            <span id="ques-row1" class="question" style="font-size: 16px;"></span><br>
+            <span id="ques-row2" class="question" style="font-size: 16px;"></span>
             </div>
-            <span class="fa fa-clock-o" style="text-align: center;">&nbsp;&nbsp;60:00</span>
+            <div class="fa fa-clock-o" style="text-align: center;">&nbsp;&nbsp;60:00</div>
             <div style="text-align: left;padding-right: 50px;">
             <button class="fa fa-send">&nbsp;&nbsp;Submit</button>
             <span class="fa fa-angle-down" onclick="hidepalette()"></span><br>
@@ -250,6 +251,17 @@
         var x=document.getElementById("palette-open");
         x.style.display="none";
     }
+    function question(){
+        var r1=document.getElementById("ques-row1");
+        for(var n=1;n<=20;n++){
+        r1.innerHTML+=("<span>"+n+"</span>&nbsp;");
+        }
+        var r2=document.getElementById("ques-row2");
+        for(var n=21;n<=40;n++){
+        r2.innerHTML+=("<span>"+n+"</span>&nbsp;");
+        }
+    }
+    question();
 </script>
 </body>
 </html>
