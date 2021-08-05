@@ -20,9 +20,7 @@
     }
     .change-icon:hover > .fa + .fa {
     display: inherit;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in;
-    transition-delay: 0.3s;
+    transition: all .3 linear;
     }
     #menu{
         position: fixed;
@@ -41,7 +39,7 @@
         padding: 8px;
     }
     .content{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
         display: flex;
         grid-template-columns: repaet(2,auto);
     }
@@ -83,23 +81,37 @@
     td{
         padding-left: 20px;
     }
-    .question span{
+    .question li{
+        border-radius: 20px;
         background-color: green;
-        border-radius: 25px;
-        font-size: 18px;
         color: white;
         font-weight: bold;
+        list-style: none;
+        padding: 5px;
+        width: 25px;
+        text-align: center;
+    }
+    .question select{
+        width: 120px;
+        height: 30px;
     }
 </style>
 <body>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="">
+
+    </div>
     <nav>
         <img src="./icon.png" height=40px>
-        <button class="change-icon" style="font-size: 30px;float: right;padding-right: 40px;padding-top: 8px;width:100px;border:none;background: transparent;" 
-        onclick="show()">
-            <i class="fa fa-bars"></i>
-            <i class="fa fa-close"></i>
-        </button>
+        <div style="float: right;padding-right: 40px;padding-top: 8px;width:100px;">
+            <button class="fa fa-chevron-down">
+
+            </button>
+            <button class="change-icon" style="font-size: 30px;border:none;background: transparent;" onclick="show()">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-close"></i>
+            </button>
+        </div>
     </nav>
     <div id="menu">
         <ul>
@@ -177,7 +189,7 @@
             </table>
             <br>
             <div class="question">
-                <span>&nbsp;&nbsp;1&nbsp;&nbsp;</span>
+                <li>1</li>
                 <select>
                     <option></option>
                     <option>TRUE</option>
@@ -188,7 +200,7 @@
             </div>
             <br>
             <div class="question">
-                <span>&nbsp;&nbsp;2&nbsp;&nbsp;</span>
+                <li>2</li>
                 <select>
                     <option></option>
                     <option>TRUE</option>
@@ -199,7 +211,7 @@
             </div>
             <br>
             <div class="question">
-                <span>&nbsp;&nbsp;3&nbsp;&nbsp;</span>
+                <li>3</li>
                 <select>
                     <option></option>
                     <option>TRUE</option>
@@ -210,7 +222,7 @@
             </div>
             <br>
             <div class="question">
-                <span>&nbsp;&nbsp;4&nbsp;&nbsp;</span>
+                <li>4</li>
                 <select>
                     <option></option>
                     <option>TRUE</option>
@@ -221,7 +233,7 @@
             </div>
             <br>
             <div class="question">
-                <span>&nbsp;&nbsp;5&nbsp;&nbsp;</span>
+                <li>5</li>
                 <select>
                     <option></option>
                     <option>TRUE</option>
@@ -232,7 +244,7 @@
             </div>
             <br>
             <div class="question">
-                <span>&nbsp;&nbsp;6&nbsp;&nbsp;</span>
+                <li>6</li>
                 <select>
                     <option></option>
                     <option>TRUE</option>
@@ -243,7 +255,7 @@
             </div>
             <br>
             <div class="question">
-                <span>&nbsp;&nbsp;7&nbsp;&nbsp;</span>
+                <li>7</li>
                 <select>
                     <option></option>
                     <option>TRUE</option>
@@ -254,7 +266,7 @@
             </div>
             <br>
             <div class="question">
-                <span>&nbsp;&nbsp;8&nbsp;&nbsp;</span>
+                <li>8</li>
                 <select>
                     <option></option>
                     <option>TRUE</option>
